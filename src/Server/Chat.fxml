@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Server.ClientHandler">
+   <TextField fx:id="tfNombre" layoutX="76.0" layoutY="99.0" />
+   <Label layoutX="76.0" layoutY="72.0" text="Usuario" />
+   <TextArea fx:id="msgArea" layoutX="117.0" layoutY="173.0" prefHeight="283.0" prefWidth="566.0" />
+   <TextField fx:id="msgText" layoutX="117.0" layoutY="479.0" prefHeight="61.0" prefWidth="566.0" />
+   <Button fx:id="msgSend" layoutX="50.0" layoutY="497.0" mnemonicParsing="false" onAction="#send" text="Send" />
+</AnchorPane>
