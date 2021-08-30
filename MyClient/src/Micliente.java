@@ -164,11 +164,11 @@ public class Micliente extends javax.swing.JFrame {
         });
         jScrollPane3.setViewportView(UL);
 
-        jLabel2.setText("Si desea calcular un monto, ingreselo con el siguiente formato:");
+        jLabel2.setText("Si desea calcular un monto, ingréselo con el siguiente formato:");
 
         jLabel3.setText("monto,valor,impuesto,peso");
 
-        jLabel4.setText("Reemplazando el valor, el impuesto y el peso con sus respectivos valores ");
+        jLabel4.setText("Reemplazando \"valor\",  \"impuesto\" y  \"peso\" con sus respectivos valores ");
 
         jLabel5.setForeground(new java.awt.Color(255, 0, 0));
         jLabel5.setText("Debe enviar el mensaje a TODOS, no olvide las comas y no coloque espacios.");
@@ -190,15 +190,14 @@ public class Micliente extends javax.swing.JFrame {
                                     .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 424, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 10, Short.MAX_VALUE))
+                                        .addGap(0, 6, Short.MAX_VALUE))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(jLabel2)
                                             .addComponent(jLabel3)
                                             .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel6)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                        .addComponent(jLabel6)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(msgText))
@@ -328,7 +327,7 @@ public class Micliente extends javax.swing.JFrame {
      * @param args los argumentos de la línea de comando
      */
 
-    // Declaración de variables - no modificar//GEN-BEGIN:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JList<String> UL;
     private javax.swing.JButton enviar;
     private javax.swing.JLabel idlabel;
@@ -345,5 +344,5 @@ public class Micliente extends javax.swing.JFrame {
     private javax.swing.JTextArea msgBox;
     private javax.swing.JTextField msgText;
     private javax.swing.JButton todos;
-    // Fin de la declaración de variables//GEN-END:variables
+    // End of variables declaration//GEN-END:variables
 }

@@ -1,4 +1,5 @@
 
+import java.awt.event.ActionEvent;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.net.Socket;
@@ -22,7 +23,7 @@ public class ClientRegister extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     /*
-      Las siguientes líneas corresponden definen la interfaz gráfica para el registro
+      Las siguientes líneas definen la interfaz gráfica para el registro
      */
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -41,10 +42,15 @@ public class ClientRegister extends javax.swing.JFrame {
         name.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         name.setToolTipText("");
         name.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        name.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nameActionPerformed(evt);
+            }
+        });
 
         join.setBackground(new java.awt.Color(204, 204, 204));
         join.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
-        join.setText("Connect");
+        join.setText("Entrar");
         join.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         join.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,6 +108,9 @@ public class ClientRegister extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void nameActionPerformed(ActionEvent evt) {
+    }
 
     /**
      * Este método permite al usuario registrarse con el nombre escrito e
@@ -166,10 +175,10 @@ public class ClientRegister extends javax.swing.JFrame {
         });
     }
 
-    // Declaración de variables - no modificar//GEN-BEGIN:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton join;
     private javax.swing.JTextField name;
-    // Fin de la declaración de variables//GEN-END:variables
+    // End of variables declaration//GEN-END:variables
 }

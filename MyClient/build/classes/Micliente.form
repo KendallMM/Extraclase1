@@ -58,7 +58,7 @@
                                       <Component id="jLabel5" alignment="0" max="32767" attributes="0"/>
                                       <Group type="102" attributes="0">
                                           <Component id="jScrollPane1" min="-2" pref="424" max="-2" attributes="0"/>
-                                          <EmptySpace min="0" pref="10" max="32767" attributes="0"/>
+                                          <EmptySpace min="0" pref="6" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -68,7 +68,6 @@
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -232,7 +231,7 @@
         </Container>
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Si desea calcular un monto, ingreselo con el siguiente formato:"/>
+            <Property name="text" type="java.lang.String" value="Si desea calcular un monto, ingr&#xe9;selo con el siguiente formato:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
@@ -242,7 +241,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Reemplazando el valor, el impuesto y el peso con sus respectivos valores "/>
+            <Property name="text" type="java.lang.String" value="Reemplazando &quot;valor&quot;,  &quot;impuesto&quot; y  &quot;peso&quot; con sus respectivos valores "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel5">
