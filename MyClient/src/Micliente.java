@@ -23,7 +23,7 @@ import javax.swing.JOptionPane;
  * @author kenda
  */
 public class Micliente extends javax.swing.JFrame {
-
+    /**
     /**
      * Creates new form Micliente
      */
