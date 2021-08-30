@@ -3,8 +3,10 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 import java.util.StringTokenizer;
 
@@ -17,6 +19,7 @@ import java.util.StringTokenizer;
  *
  * @author kenda
  */
+@SuppressWarnings("ALL")
 public class Server extends javax.swing.JFrame {
 
     /**
@@ -75,7 +78,31 @@ public class Server extends javax.swing.JFrame {
             while (!clientColl.isEmpty()) {
                 try {
                     String i = new DataInputStream(s.getInputStream()).readUTF();
-                    if (i.equals("mkoihgteazdcvgyhujb096785542AXTY")) {
+                    String monto = i;
+                    List<String> calc = Arrays.asList(monto.split(","));
+                    if (calc.get(0).equals("monto")){
+                        int a = Integer.parseInt(calc.get(1));
+                        int b = Integer.parseInt(calc.get(2));
+                        int c = Integer.parseInt(calc.get(3));
+                        Double total =  ((a*b/100)+(c*0.15));
+                        i = "El monto calculado es de: " + total.toString();
+                        Set k = clientColl.keySet();
+                        Iterator itr = k.iterator();
+                        while (itr.hasNext()) {
+                            String key = (String) itr.next();
+                            if (!key.equalsIgnoreCase(ID)) {
+                                try {
+                                    new DataOutputStream(((Socket) clientColl.get(key)).getOutputStream()).writeUTF(i);
+                                } catch (Exception ex) {
+                                    clientColl.remove(key);
+                                    msgBox.append(key + ": salió!");
+                                    new PrepareClientList().start();
+                                }
+                            }
+                        }
+                        
+                    }
+                    else if (i.equals("mkoihgteazdcvgyhujb096785542AXTY")) {
                         clientColl.remove(ID);
                         msgBox.append(ID + ": salió! \n");
                         new PrepareClientList().start();
@@ -85,7 +112,7 @@ public class Server extends javax.swing.JFrame {
                             String key = (String) itr.next();
                             if (!key.equalsIgnoreCase(ID)) {
                                 try {
-                                    new DataOutputStream(((Socket) clientColl.get(key)).getOutputStream()).writeUTF("AAAAAAAAAAAAAAAAAAAAAAAAA");
+                                    new DataOutputStream(((Socket) clientColl.get(key)).getOutputStream()).writeUTF(i);
                                 } catch (Exception ex) {
                                     clientColl.remove(key);
                                     msgBox.append(key + ": salió!");
